@@ -17,6 +17,10 @@ For optimal performance and reasonable evaluation time (approximately 10 hours),
 Getting Started (Kick-the-tire)
 -------------------------------
 
+.. warning::
+
+   The Docker image and artifact are currently pending upload. The links and commands below will be functional once the upload is complete.
+
 To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive:
 
 .. code-block:: console
