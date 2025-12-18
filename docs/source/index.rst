@@ -19,7 +19,7 @@ Getting Started (Kick-the-tire)
 
 .. warning::
 
-   The Docker image and artifact are currently pending upload. The links and commands below will be functional once the upload is complete.
+   The Docker image is available on Docker Hub. However, the artifact upload to Zenodo is currently pending due to unstable connections. Please use the Docker Hub image for now.
 
 To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive:
 

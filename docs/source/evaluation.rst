@@ -25,7 +25,7 @@ Run the reproduction script:
 
 .. code-block:: console
 
-   $ python3 evaluation/reproduce_experiments.py --output-dir ./results --ablation
+   $ python3 evaluation/reproduce_experiments.py --output-dir ./results
 
 This process takes approximately 10 hours to finish. We recommend using ``screen`` to run it in the background:
 
@@ -33,7 +33,7 @@ This process takes approximately 10 hours to finish. We recommend using ``screen
 
    $ screen -S exp -s bash
    $ cd /home/once4all
-   $ python3 evaluation/reproduce_experiments.py --output-dir ./results --ablation
+   $ python3 evaluation/reproduce_experiments.py --output-dir ./results
 
 Common Options
 ^^^^^^^^^^^^^^
@@ -57,9 +57,6 @@ Common Options
    * - ``--fuzzers``
      - List of fuzzers to evaluate (e.g., ``once4all``, ``histfuzz``)
      - ``once4all``, ``histfuzz``, ``yinyang``, ``opfuzz``, ``typefuzz``
-   * - ``--ablation``
-     - Run ablation study (Once4All standalone mode)
-     - False
    * - ``--output-dir``
      - Directory to store results
      - ``./experiment_results``
