@@ -17,28 +17,44 @@ For optimal performance and reasonable evaluation time (approximately 10 hours),
 Getting Started (Kick-the-tire)
 -------------------------------
 
-.. warning::
-
-   The Docker image is available on Docker Hub. However, the artifact upload to Zenodo is currently pending due to unstable connections. Please use the Docker Hub image for now.
-
-
 Step 1: Download the Docker Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get started, download the Docker image from either Zenodo or Docker Hub. For simplicity and ease of use, we recommend pulling the image from Docker Hub using the following command:
+To get started, download the Docker image from either Zenodo or Docker Hub.
+
+**Option A: Pull from Docker Hub (Recommended)**
+
+For simplicity and ease of use, we recommend pulling the image from Docker Hub using the following command:
 
 .. code-block:: console
 
   $ docker pull merlin07/once4all:latest
 
+**Option B: Download from Zenodo**
+
+Alternatively, you can download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.17946453>`_]. Once downloaded, extract the artifact archive:
+
+.. code-block:: console
+
+  $ gunzip -c once4all.tar.gz > once4all.tar
+  $ cat once4all.tar | docker import - once4all
+
 Step 2: Start the Docker Container
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once the image is downloaded, start the Docker container. If you pulled the image from Docker Hub, you can use the following command:
+Once the image is downloaded, start the Docker container.
+
+**If you pulled the image from Docker Hub:**
 
 .. code-block:: console
 
   $ docker run -itd --privileged --name once4all merlin07/once4all:latest /bin/bash
+
+**If you downloaded the artifact from Zenodo:**
+
+.. code-block:: console
+
+  $ docker run -itd --privileged --name once4all once4all /bin/bash
 
 This command will start the container in detached mode with the name ``once4all``.
 
