@@ -21,45 +21,48 @@ Getting Started (Kick-the-tire)
 
    The Docker image is available on Docker Hub. However, the artifact upload to Zenodo is currently pending due to unstable connections. Please use the Docker Hub image for now.
 
-To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive:
 
-.. code-block:: console
+Step 1: Download the Docker Image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  $ gunzip -c once4all.tar.gz > once4all.tar
-  $ cat once4all.tar | docker import - once4all
-
-Alternatively, you can pull the Once4All Docker image directly from Docker Hub:
+To get started, download the Docker image from either Zenodo or Docker Hub. For simplicity and ease of use, we recommend pulling the image from Docker Hub using the following command:
 
 .. code-block:: console
 
   $ docker pull merlin07/once4all:latest
 
-Starting the Container
-----------------------
+Step 2: Start the Docker Container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have either imported or pulled the image, please use the following commands to start the container.
-
-**If you downloaded the artifact from Zenodo:**
-
-.. code-block:: console
-
-  $ docker run -itd --privileged --name once4all once4all /bin/bash
-
-**If you pulled the image from Docker Hub:**
+Once the image is downloaded, start the Docker container. If you pulled the image from Docker Hub, you can use the following command:
 
 .. code-block:: console
 
   $ docker run -itd --privileged --name once4all merlin07/once4all:latest /bin/bash
 
-.. note::
+This command will start the container in detached mode with the name ``once4all``.
 
-  When the container starts successfully, a long hash string will appear on the terminal, indicating that the **Kick-the-tire** setup is complete.
+Step 3: Access the Container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the following command to enter the container:
+To access the container's shell, execute the following command:
 
 .. code-block:: console
 
-   $ docker exec -it once4all /bin/bash
+  $ docker exec -it once4all /bin/bash
+
+This will open an interactive shell session inside the container, allowing you to run the necessary commands for the evaluation.
+
+Step 4: Verify Dependencies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Inside the container, run the setup script to ensure all dependencies are correctly installed:
+
+.. code-block:: console
+
+  $ /home/setup.sh
+
+If the setup is successful, you will see a confirmation message indicating that all dependencies are ready.
 
 Usage
 -----
@@ -112,8 +115,6 @@ CLI Options
      - Temporary directory for solver output (default: ``./temp/``).
    * - ``--generator_path``
      - Path to a custom directory containing generators.
-   * - ``--standalone``
-     - Run in standalone generation mode (no seed files required).
 
 Output
 ^^^^^^
