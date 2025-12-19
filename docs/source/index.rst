@@ -14,6 +14,24 @@ For optimal performance and reasonable evaluation time (approximately 10 hours),
 - **Memory**: At least 32 GB
 - **Disk Space**: 20 GB free
 
+Artifact Evaluation Roadmap
+---------------------------
+
+We suggest the following steps for artifact evaluation:
+
+1. **Kick-the-tire**: Follow the **Getting Started** section to download and start the Docker container.
+2. **Availability**: The artifact is publicly available on Zenodo with DOI `10.5281/zenodo.17946453 <https://doi.org/10.5281/zenodo.17946453>`_.
+3. **Functionality**: Follow the **Usage** section to verify that ``once4all`` runs correctly.
+4. **Reproducibility**:
+
+   - **RQ1 (Table 1)**: Refer to the :doc:`bug-report` page for links to the bugs identified by Once4All.
+   - **RQ2 (Table 3)**: Refer to the :doc:`evaluation` page to replicate the code coverage comparison.
+
+   .. note::
+
+      - **Randomness**: Due to the randomness of fuzzing, code coverage may differ slightly from the paper, but ``once4all`` should consistently achieve the best performance.
+      - **Omitted Tools**: ``LaST`` and ``Fuzz4All`` are omitted from this evaluation as they require GPU resources or LLM API keys and do not outperform the included tools.
+
 Getting Started (Kick-the-tire)
 -------------------------------
 
@@ -85,7 +103,7 @@ Usage
 
 (Note: Run these commands inside the Docker container)
 
-Run the tool from the repository root:
+Run the tool from the repository root to start mutation-based fuzzing on existing SMT-LIB v2 formulas:
 
 .. code-block:: bash
 
@@ -94,19 +112,6 @@ Run the tool from the repository root:
      --solver2 cvc5 --solverbin2 /path/to/cvc5 \
      --bugs ./bug_triggering_formulas \
      --option default
-
-Modes
-^^^^^
-
-**1. Mutation Mode (Default)**
-Mutates existing SMT-LIB v2 formulas found in the specified bugs directory.
-
-**2. Standalone Mode**
-Generates formulas from scratch using the generators without seed files.
-
-.. code-block:: bash
-
-   python3 once4all.py --standalone ...
 
 CLI Options
 ^^^^^^^^^^^

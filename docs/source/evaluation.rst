@@ -10,7 +10,9 @@ To reproduce the code coverage experiments, use the ``evaluation/reproduce_exper
 
 .. note::
 
-   All the following commands are executed in the docker container.
+   - **Environment**: All the following commands are executed in the docker container.
+   - **Randomness**: Due to the inherent randomness of fuzzing, the exact code coverage numbers may vary from those presented in the paper. However, ``once4all`` should consistently achieve the best performance among the evaluated fuzzers, demonstrating that the results are reproducible.
+   - **Omitted Tools**: Tools such as ``LaST`` and ``Fuzz4All`` are omitted from this evaluation because they require GPU resources or API keys to invoke LLMs. Furthermore, they do not outperform the tools included in this artifact.
 
 Usage
 ^^^^^
