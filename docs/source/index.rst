@@ -10,18 +10,18 @@ Please feel free to reach out if you encounter any issues or have feedback.
 
   We have released a preliminary version of Chimera, which incorporates the techniques presented in our ASPLOS 2026 paper as well as those from two additional related works. The code is publicly available at https://github.com/merlin-cs/Chimera.
 
-   **Chimera** is an integrated toolkit for testing, validating, and exploring SMT solvers.
+  **Chimera** is an integrated toolkit for testing, validating, and exploring SMT solvers.
    It brings together techniques from three publications:
 
-   * **Once-for-All: Skeleton-Guided SMT Solver Fuzzing with LLM-Synthesized Generators**
+  * **Once-for-All: Skeleton-Guided SMT Solver Fuzzing with LLM-Synthesized Generators**
      Maolin Sun, Yibiao Yang, Yuming Zhou.
      *ASPLOS 2026*
 
-   * **Validating SMT Rewriters via Rewrite Space Exploration Supported by Generative Equality Saturation**
+  * **Validating SMT Rewriters via Rewrite Space Exploration Supported by Generative Equality Saturation**
      Maolin Sun, Yibiao Yang, Jiangchang Wu, Yuming Zhou.
      *OOPSLA 2025*
 
-   * **Validating SMT Solvers via Skeleton Enumeration Empowered by Historical Bug-Triggering Inputs**
+  * **Validating SMT Solvers via Skeleton Enumeration Empowered by Historical Bug-Triggering Inputs**
      Maolin Sun, Yibiao Yang, Ming Wen, Yongcong Wang, Yuming Zhou, Hai Jin.
      *ICSE 2023*
 
