@@ -14,15 +14,15 @@ Please feel free to reach out if you encounter any issues or have feedback.
    It brings together techniques from three publications:
 
    * **Once-for-All: Skeleton-Guided SMT Solver Fuzzing with LLM-Synthesized Generators**
-     Maolin Sun, Yibiao Yang, Yuming Zhou
+     Maolin Sun, Yibiao Yang, Yuming Zhou.
      *ASPLOS 2026*
 
    * **Validating SMT Rewriters via Rewrite Space Exploration Supported by Generative Equality Saturation**
-     Maolin Sun, Yibiao Yang, Jiangchang Wu, Yuming Zhou
+     Maolin Sun, Yibiao Yang, Jiangchang Wu, Yuming Zhou.
      *OOPSLA 2025*
 
    * **Validating SMT Solvers via Skeleton Enumeration Empowered by Historical Bug-Triggering Inputs**
-     Maolin Sun, Yibiao Yang, Ming Wen, Yongcong Wang, Yuming Zhou, Hai Jin
+     Maolin Sun, Yibiao Yang, Ming Wen, Yongcong Wang, Yuming Zhou, Hai Jin.
      *ICSE 2023*
 
 
